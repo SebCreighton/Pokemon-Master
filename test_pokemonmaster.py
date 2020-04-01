@@ -2,7 +2,7 @@ import pytest
 from pokemonmaster import *
 
 
-@pytest.mark.parametrize("charmender", "")
+#@pytest.mark.parametrize("charmender", "")
 
 @pytest.fixture
 def charmender():
