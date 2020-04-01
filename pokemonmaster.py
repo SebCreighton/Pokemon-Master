@@ -12,6 +12,7 @@ class Pokemon:
         self.current_health -= health_loss
         print(self.name + " now has " + str(self.current_health) + " health!!")
         if self.current_health <= 0:
+            self.current_health = 0
             Pokemon.knockout_pokemon(self)
 
     def gain_health(self, health_gain):
@@ -26,7 +27,10 @@ class Pokemon:
         print(self.name + " knocked out!!")
 
     def revive_pokemon(self):
+        self.current_health += 50
+        self.knocked_out = "No"
         print(self.name + " revived!!")
+        print(self.name + " has " + str(self.current_health) + " health!!")
 
     def attack(self, other_pokemon):
         damage = 20
@@ -97,10 +101,13 @@ blastoise = Pokemon("Blastoise", 10, "Water", 100, 100, "No")
 ash = Trainer([charizard, bulbasaur, charmender, venasaur, squirtle, blastoise], "Ash", 3, 1)
 ketch = Trainer([bulbasaur, charizard, squirtle, blastoise, venasaur], "Ketch", 3, 1)
 
+while bulbasaur.current_health > 0:
+    charmender.attack(bulbasaur)
+
+bulbasaur.revive_pokemon()
+
 
 ash.attack_another_trainer(ketch)
-
-ash.switch_active_pokemon(2)
 ash.switch_active_pokemon(4)
 ketch.switch_active_pokemon(2)
 ketch.switch_active_pokemon(4)
@@ -113,4 +120,6 @@ ketch.use_potion()
 ash.attack_another_trainer(ketch)
 ash.attack_another_trainer(ketch)
 ketch.switch_active_pokemon(2)
+
+
 
