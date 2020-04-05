@@ -45,10 +45,9 @@ def test_revive_pokemon(charizard):
     charizard.revive_pokemon()
     assert charizard.knocked_out == "No"
 
-#Will look into this further
-#def test_attack(bulbasaur, charmender):
+def test_attack(bulbasaur, charmender):
 
-    #while bulbasaur.current_health >= 0:
-        #charmender.attack(bulbasaur)
+    while bulbasaur.current_health > 0:
+        charmender.attack(bulbasaur)
 
-    #assert bulbasaur.knocked_out == "Yes"
+    assert bulbasaur.knocked_out == "Yes"
