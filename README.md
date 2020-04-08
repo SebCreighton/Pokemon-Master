@@ -1,6 +1,6 @@
 #  Pokemon Master
 
-For this concept, a game system similar to a popular game series Pokemon will be implemented.  For those unfamilliar with Pokemon, it is a game where creatures (Pokemon) battle against each other.  Each Pokemon has statistics associated with it like health, level, type and a name.  
+For this concept which is a Codeacademy project, a game system similar to a popular game series Pokemon will be implemented.  For those unfamilliar with Pokemon, it is a game where creatures (Pokemon) battle against each other.  Each Pokemon has statistics associated with it like health, level, type and a name.  
 
 The steps taken to implement this project is as follows:
 - A Pokemon class was created that keeps track of Pokemon's name, level, type (such as "Fire" and "Water"), maximum health, current health and whether or not Pokemon was knocked out.  
